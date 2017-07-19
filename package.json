@@ -1,0 +1,14 @@
+{
+  "name": "generate-barcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mahtab Alam <alammahtab08@gmail.com> (http://www.mahtabalam.net)",
+  "license": "ISC",
+  "dependencies": {
+    "bwip-js": "^1.4.2"
+  }
+}

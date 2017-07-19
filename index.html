@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Barcodes</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+   
+
+  <body>
+      <br/><br/> <br/><br/>   
+ 
+    <div class="container">
+
+        <div class="row">
+          <h1>EDTA</h1>
+           <div class="col-md-12" id="edta">            
+           </div>
+        </div> 
+
+        <div class="row">
+          <h1>Plasma</h1>
+           <div class="col-md-12" id="plasma">            
+           </div>
+        </div>  
+
+
+        <div class="row">
+         <h1>Buffycoat</h1>
+           <div class="col-md-12" id="buffy">            
+           </div>
+        </div>
+
+        <div class="row">
+         <h1>RBC</h1>
+           <div class="col-md-12" id="rbc">            
+           </div>
+        </div>        
+        <br/><br/>
+    </div>
+
+    <script>
+       
+       var edta=["ET100101", "ET100102", "ET100103", "ET100104"];
+       edta.forEach(function(barcode){
+            var path ="barcodes/edta/"+barcode+".png";
+            console.log("Path "+path)
+         $("#edta")
+         .append('<div style="padding-left:160px;margin-top:40px;float:left">'+
+                 '<img src="'+path+'"'+'/></div>');
+       });
+
+
+       var plasma=["PC100101", "PC100102", "PC100103", "PC100104",
+                   "PC200101", "PC200102", "PC200103", "PC200104",
+                   "PC300101", "PC300102", "PC300103", "PC300104"];
+       plasma.forEach(function(barcode){
+            var path ="barcodes/plasma/"+barcode+".png";
+            console.log("Path "+path)
+         $("#plasma")
+         .append('<div style="padding-left:160px;margin-top:40px;float:left">'+
+                 '<img src="'+path+'"'+'/></div>');
+       });
+
+
+        var buffy=["BC100101", "BC100102", "BC100103", "BC100104",
+                   "BC200101", "BC200102", "BC200103", "BC200104",
+                   "BC300101", "BC300102", "BC300103", "BC300104"];
+       buffy.forEach(function(barcode){
+            var path ="barcodes/buffycoat/"+barcode+".png";
+            console.log("Path "+path)
+         $("#buffy")
+         .append('<div style="padding-left:160px;margin-top:40px;float:left">'+
+                 '<img src="'+path+'"'+'/></div>');
+       });
+
+
+       var rbc=["RC100101", "RC100102", "RC100103", "RC100104",
+                   "RC200101", "RC200102", "RC200103", "RC200104",
+                   "RC300101", "RC300102", "RC300103", "RC300104"];
+       rbc.forEach(function(barcode){
+            var path ="barcodes/rbc/"+barcode+".png";
+            console.log("Path "+path)
+         $("#rbc")
+         .append('<div style="padding-left:160px;margin-top:40px;float:left">'+
+                 '<img src="'+path+'"'+'/></div>');
+       });
+       
+
+   </script> 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
